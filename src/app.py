@@ -47,7 +47,7 @@ def get_llm_response(df_head, user_query):
         return None
     
     genai.configure(api_key=api_key)
-    model = genai.GenerativeModel('gemini-pro')
+    model = genai.GenerativeModel('gemini-1.5-pro-latest')
 
     prompt = f"""
     You are an expert Python programmer specializing in Pandas.
