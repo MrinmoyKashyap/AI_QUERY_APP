@@ -4,11 +4,11 @@ A professional AI-powered data query system where users can upload datasets, que
 
 ## Features
 
-- 📤 **File Upload**: Support for CSV and Excel files
-- 💬 **Natural Language Queries**: Ask questions about your data in plain English
-- 📊 **Interactive Charts**: Generate bar, line, pie, scatter, and area charts
-- ✏️ **Data Modification**: Transform your data using natural language commands
-- 🎨 **Modern UI**: Beautiful dark theme with smooth animations
+-  **File Upload**: Support for CSV and Excel files
+-  **Natural Language Queries**: Ask questions about your data in plain English
+-  **Interactive Charts**: Generate bar, line, pie, scatter, and area charts
+-  **Data Modification**: Transform your data using natural language commands
+-  **Modern UI**: Beautiful dark theme with smooth animations
 
 ## Tech Stack
 
