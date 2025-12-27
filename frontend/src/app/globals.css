@@ -1,0 +1,147 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 270 50% 98%;
+    --foreground: 270 50% 10%;
+    --card: 270 40% 99%;
+    --card-foreground: 270 50% 10%;
+    --primary: 270 70% 55%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 270 30% 94%;
+    --secondary-foreground: 270 50% 20%;
+    --muted: 270 30% 94%;
+    --muted-foreground: 270 20% 45%;
+    --accent: 280 60% 92%;
+    --accent-foreground: 270 50% 20%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 270 30% 88%;
+    --input: 270 30% 88%;
+    --ring: 270 70% 55%;
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 270 50% 8%;
+    --foreground: 270 20% 92%;
+    --card: 270 45% 12%;
+    --card-foreground: 270 20% 92%;
+    --primary: 280 70% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 270 40% 18%;
+    --secondary-foreground: 270 20% 92%;
+    --muted: 270 40% 15%;
+    --muted-foreground: 270 20% 60%;
+    --accent: 280 50% 22%;
+    --accent-foreground: 270 20% 92%;
+    --destructive: 0 63% 35%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 270 40% 20%;
+    --input: 270 40% 20%;
+    --ring: 280 70% 60%;
+  }
+
+  .light {
+    --background: 270 50% 98%;
+    --foreground: 270 50% 10%;
+    --card: 270 40% 99%;
+    --card-foreground: 270 50% 10%;
+    --primary: 270 70% 55%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 270 30% 94%;
+    --secondary-foreground: 270 50% 20%;
+    --muted: 270 30% 94%;
+    --muted-foreground: 270 20% 45%;
+    --accent: 280 60% 92%;
+    --accent-foreground: 270 50% 20%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 270 30% 88%;
+    --input: 270 30% 88%;
+    --ring: 270 70% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-purple-600 via-violet-500 to-purple-400 bg-clip-text text-transparent;
+  }
+
+  .glass {
+    @apply bg-white/10 backdrop-blur-xl border border-white/20;
+  }
+
+  .glass-dark {
+    @apply bg-black/20 backdrop-blur-xl border border-white/10;
+  }
+
+  .animate-in {
+    animation: animateIn 0.3s ease-out forwards;
+  }
+
+  @keyframes animateIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-muted rounded-full;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-muted-foreground/30 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-muted-foreground/50;
+}
+
+/* Table styles */
+.data-table {
+  @apply w-full border-collapse;
+}
+
+.data-table th {
+  @apply px-4 py-3 text-left text-sm font-semibold text-muted-foreground bg-muted/50 border-b border-border;
+}
+
+.data-table td {
+  @apply px-4 py-3 text-sm border-b border-border/50;
+}
+
+.data-table tr:hover td {
+  @apply bg-muted/30;
+}
+
+/* Chart container */
+.chart-container {
+  @apply w-full h-[400px] p-4;
+}
